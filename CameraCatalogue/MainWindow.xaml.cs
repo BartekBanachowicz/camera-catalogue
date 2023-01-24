@@ -22,9 +22,7 @@ namespace Banachowicz.CameraCatalogue.UI
     {
         public MainWindow()
         {
-            InitializeComponent();
-            Interfaces.
-            
+            InitializeComponent();            
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

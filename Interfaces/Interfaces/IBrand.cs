@@ -2,7 +2,7 @@
 {
     public interface IBrand
     {
-        String ID { get; set; }
+        int ID { get; set; }
         String Name { get; set; }
         String Country { get; set; }
     }

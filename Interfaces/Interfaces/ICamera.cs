@@ -2,7 +2,7 @@
 {
     public interface ICamera
     {
-        String ID { get; set; }
+        int ID { get; set; }
         String Name { get; set; }
         IBrand Brand { get; set; }
         Core.CameraType Type { get; set; }

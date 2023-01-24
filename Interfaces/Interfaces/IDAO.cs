@@ -8,7 +8,7 @@
         ICamera AddNewCamera(ICamera camera);
         IBrand AddNewBrand(IBrand brand);
 
-        ICamera GetCamera(String ID);
-        ICamera GetBrand(String ID);
+        ICamera GetCamera(int ID);
+        IBrand GetBrand(int ID);
     }
 }

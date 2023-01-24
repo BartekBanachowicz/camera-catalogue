@@ -29,12 +29,12 @@ namespace Banachowicz.CameraCatalogue.DAOSql
             throw new NotImplementedException();
         }
 
-        public ICamera GetBrand(string ID)
+        public IBrand GetBrand(int ID)
         {
             throw new NotImplementedException();
         }
 
-        public ICamera GetCamera(string ID)
+        public ICamera GetCamera(int ID)
         {
             throw new NotImplementedException();
         }

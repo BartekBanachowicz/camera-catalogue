@@ -2,8 +2,15 @@
 {
     internal class Brand : Interfaces.IBrand
     {
-        public string ID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Country { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Country { get; set; }
+
+        public Brand(int iD, string name, string country)
+        {
+            ID = iD;
+            Name = name;
+            Country = country;
+        }
     }
 }
