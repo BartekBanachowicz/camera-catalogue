@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CameraCatalogue
+namespace Banachowicz.CameraCatalogue.UI
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,8 @@ namespace CameraCatalogue
         public MainWindow()
         {
             InitializeComponent();
+            Interfaces.
+            
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

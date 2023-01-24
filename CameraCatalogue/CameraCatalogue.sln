@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CameraCatalogue", "CameraCatalogue.csproj", "{32FDB8B2-40B9-46FE-B75D-0B597167DA37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI.csproj", "{32FDB8B2-40B9-46FE-B75D-0B597167DA37}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "..\Core\Core\Core.csproj", "{DE56E727-D4A7-428F-A014-94FFCD4B50DC}"
 EndProject
@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAOMock", "..\DAOMock\DAOMo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "..\Interfaces\Interfaces\Interfaces.csproj", "{B2146366-8CCC-4434-96EC-A284D70C85D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAOSql", "..\DAOSql\DAOSql\DAOSql.csproj", "{19C9CD66-8B92-4C51-94BF-94A52906FC92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAOSql", "..\DAOSql\DAOSql\DAOSql.csproj", "{19C9CD66-8B92-4C51-94BF-94A52906FC92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "..\Logic\Logic\Logic.csproj", "{CF9012A2-66E6-475F-B470-B324DFA180E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{19C9CD66-8B92-4C51-94BF-94A52906FC92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19C9CD66-8B92-4C51-94BF-94A52906FC92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19C9CD66-8B92-4C51-94BF-94A52906FC92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF9012A2-66E6-475F-B470-B324DFA180E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF9012A2-66E6-475F-B470-B324DFA180E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF9012A2-66E6-475F-B470-B324DFA180E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF9012A2-66E6-475F-B470-B324DFA180E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
