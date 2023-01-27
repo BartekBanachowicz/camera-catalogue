@@ -6,6 +6,16 @@ namespace Banachowicz.CameraCatalogue.DAOSql
     {
         private DatabaseContext db = new DatabaseContext();
 
+        public void DeleteBrand(IBrand brand)
+        {
+            db.Brands.Remove((Brand) brand);
+        }
+
+        public void DeleteCamera(ICamera camera)
+        {
+            db.Cameras.Remove((Camera) camera);
+        }
+
         public IEnumerable<IBrand> GetAllBrands()
         {
             return db.Brands;
@@ -13,37 +23,29 @@ namespace Banachowicz.CameraCatalogue.DAOSql
 
         public IEnumerable<ICamera> GetAllCameras()
         {
-            throw new NotImplementedException();
-        }
-
-        public IBrand GetBrand(int ID)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ICamera GetCamera(int ID)
-        {
-            throw new NotImplementedException();
+            return db.Cameras;
         }
 
         public IBrand NewBrand()
         {
-            throw new NotImplementedException();
+            return new Brand(0);
         }
 
         public ICamera NewCamera()
         {
-            throw new NotImplementedException();
+            return new Camera(0);
         }
 
         public IBrand SaveBrand(IBrand brand)
         {
-            throw new NotImplementedException();
+            db.Brands.Add((Brand) brand);
+            return brand;
         }
 
         public ICamera SaveCamera(ICamera camera)
         {
-            throw new NotImplementedException();
+            db.Cameras.Add((Camera) camera);
+            return camera;
         }
     }
 }

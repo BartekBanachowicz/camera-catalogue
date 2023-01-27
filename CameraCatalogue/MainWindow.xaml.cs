@@ -1,20 +1,7 @@
-﻿using Banachowicz.CameraCatalogue.Interfaces;
-using Banachowicz.CameraCatalogue.UI.ViewModel;
+﻿using Banachowicz.CameraCatalogue.UI.ViewModel;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Banachowicz.CameraCatalogue.UI
 {
@@ -29,12 +16,11 @@ namespace Banachowicz.CameraCatalogue.UI
             Logic.Logic logic = new Logic.Logic("DAOMock.dll");
 
             BrandsTab.DataContext = new BrandListViewModel(logic);
-            
-        }
+            CamerasTab.DataContext = new CameraListViewModel(logic);
 
-        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            BrandBox.ItemsSource = logic.GetBrands();
+            CameraTypeBox.ItemsSource = Enum.GetValues(typeof(Core.CameraType));
+            SensorTypeBox.ItemsSource = Enum.GetValues(typeof(Core.SensoreType));
         }
     }
 }

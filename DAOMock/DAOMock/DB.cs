@@ -7,6 +7,8 @@ namespace Banachowicz.CameraCatalogue.DAOMock
     {
         private List<IBrand> _brands;
         private List<ICamera> _cameras;
+        private int nextCameraId = 6;
+        private int nextBrandId = 4;
 
         public DB()
         {
@@ -27,6 +29,16 @@ namespace Banachowicz.CameraCatalogue.DAOMock
             };
         }
 
+        public void DeleteBrand(IBrand brand)
+        {
+            this._brands.Remove(brand);
+        }
+
+        public void DeleteCamera(ICamera camera)
+        {
+            this._cameras.Remove(camera);
+        }
+
         public IEnumerable<IBrand> GetAllBrands()
         {
             return this._brands;
@@ -39,22 +51,24 @@ namespace Banachowicz.CameraCatalogue.DAOMock
 
         public IBrand NewBrand()
         {
-            return new Brand();
+            return new Brand(nextBrandId++);
         }
 
         public ICamera NewCamera()
         {
-            return new Camera();
+            return new Camera(nextCameraId++);
         }
 
         public IBrand SaveBrand(IBrand brand)
         {
-            throw new NotImplementedException();
+            this._brands.Add(brand);
+            return brand;
         }
 
         public ICamera SaveCamera(ICamera camera)
         {
-            throw new NotImplementedException();
+            this._cameras.Add(camera);
+            return camera;
         }
     }
 }

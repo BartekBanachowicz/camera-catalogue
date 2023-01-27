@@ -1,5 +1,6 @@
 ﻿using Banachowicz.CameraCatalogue.Core;
 using Banachowicz.CameraCatalogue.Interfaces;
+using System.Xml.Linq;
 
 namespace Banachowicz.CameraCatalogue.DAOMock.BO
 {
@@ -20,6 +21,13 @@ namespace Banachowicz.CameraCatalogue.DAOMock.BO
             Brand = brand;
         }
 
-        public Camera() { }
+        public Camera(int iD) 
+        {
+            ID = iD;
+            Name = "";
+            Type = CameraType.DSLR;
+            SensoreType = SensoreType.APSC;
+            Brand = null;
+        }
     }
 }

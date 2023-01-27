@@ -29,7 +29,22 @@ namespace Banachowicz.CameraCatalogue.Logic
 
         public void DeleteBrand(IBrand brand)
         {
-        
+            dao.DeleteBrand(brand);
+        }
+
+        public ICamera NewCamera()
+        {
+            return dao.NewCamera();
+        }
+
+        public void SaveCamera(ICamera camera)
+        {
+            dao.SaveCamera(camera);
+        }
+
+        public void DeleteCamera(ICamera camera)
+        {
+           dao.DeleteCamera(camera);
         }
 
         public Logic(String daoPath) 

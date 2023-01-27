@@ -1,6 +1,7 @@
 ﻿using Banachowicz.CameraCatalogue.Core;
 using Banachowicz.CameraCatalogue.Interfaces;
 using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace Banachowicz.CameraCatalogue.DAOSql
 {
@@ -23,6 +24,13 @@ namespace Banachowicz.CameraCatalogue.DAOSql
             SensoreType = sensoreType;
         }
 
-        public Camera() { }
+        public Camera(int iD)
+        {
+            ID = iD;
+            Name = "";
+            Brand = null;
+            Type = CameraType.DSLR;
+            SensoreType = SensoreType.APSC;
+        }
     }
 }

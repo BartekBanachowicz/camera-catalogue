@@ -13,6 +13,11 @@
             Country = country;
         }
 
-        public Brand() { }
+        public Brand(int ID) 
+        {
+            this.ID = ID;
+            this.Name = "";
+            this.Country = "";
+        }
     }
 }

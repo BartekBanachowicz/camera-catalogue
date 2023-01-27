@@ -10,5 +10,8 @@
 
         ICamera NewCamera();
         IBrand NewBrand();
+
+        void DeleteBrand(IBrand brand);
+        void DeleteCamera(ICamera camera);
     }
 }

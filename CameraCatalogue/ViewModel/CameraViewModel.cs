@@ -1,4 +1,5 @@
 ﻿using Banachowicz.CameraCatalogue.Interfaces;
+using System;
 using System.ComponentModel;
 
 namespace Banachowicz.CameraCatalogue.UI.ViewModel
@@ -19,13 +20,18 @@ namespace Banachowicz.CameraCatalogue.UI.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public int Id
+        public ICamera GetCamera()
+        {
+            return Camera;
+        }
+
+        public int ID
         {
             get => Camera.ID;
             set
             {
                 Camera.ID = value;
-                RaisePropertyChanged(nameof(Id));
+                RaisePropertyChanged(nameof(ID));
             }
         }
 

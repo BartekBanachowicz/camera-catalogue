@@ -15,5 +15,13 @@ namespace Banachowicz.CameraCatalogue.DAOSql
             Name = name;
             Country = country;
         }
+
+        public Brand(int ID)
+        {
+            this.ID = ID;
+            this.Name = "";
+            this.Country = "";
+        }
+
     }
 }
