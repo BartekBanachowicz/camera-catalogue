@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace Banachowicz.CameraCatalogue.DAOSql
 {
-    public class SqlDao : Interfaces.IDAO
+    public class SqlDao : IDAO
     {
+        private DatabaseContext db = new DatabaseContext();
+
         public IBrand AddNewBrand(IBrand brand)
         {
             throw new NotImplementedException();
@@ -21,7 +23,7 @@ namespace Banachowicz.CameraCatalogue.DAOSql
 
         public IEnumerable<IBrand> GetAllBrands()
         {
-            throw new NotImplementedException();
+            return db.Brands;
         }
 
         public IEnumerable<ICamera> GetAllCameras()

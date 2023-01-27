@@ -12,5 +12,7 @@
             Name = name;
             Country = country;
         }
+
+        public Brand() { }
     }
 }

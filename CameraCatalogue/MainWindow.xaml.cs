@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Banachowicz.CameraCatalogue.Interfaces;
+using Banachowicz.CameraCatalogue.UI.ViewModel;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +25,11 @@ namespace Banachowicz.CameraCatalogue.UI
     {
         public MainWindow()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            Logic.Logic logic = new Logic.Logic("DAOSql.dll");
+
+            BrandsTab.DataContext = new BrandListViewModel(logic);
+            
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)

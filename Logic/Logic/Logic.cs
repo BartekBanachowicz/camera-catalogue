@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using Banachowicz.CameraCatalogue.Interfaces;
+using System.Reflection;
 
 namespace Banachowicz.CameraCatalogue.Logic
 {
@@ -16,6 +17,11 @@ namespace Banachowicz.CameraCatalogue.Logic
             return dao.GetAllBrands();
         }
 
+        public IBrand AddEmptyBrand()
+        {
+            return dao.AddEmptyBrand();
+        }
+
         public Logic(String daoPath) 
         {
             Assembly a = Assembly.UnsafeLoadFrom(daoPath);
@@ -25,7 +31,7 @@ namespace Banachowicz.CameraCatalogue.Logic
 
             foreach (Type type in a.GetTypes())
             {
-                foreach (var i in type.GetInterfaces()) 
+                if (type.GetInterface("Banachowicz.CameraCatalogue.Interfaces.IDAO") != null)
                 {
                     classToCreate = type;
                 }

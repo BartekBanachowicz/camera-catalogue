@@ -19,5 +19,7 @@ namespace Banachowicz.CameraCatalogue.DAOMock.BO
             SensoreType = sensoreType;
             Brand = brand;
         }
+
+        public Camera() { }
     }
 }

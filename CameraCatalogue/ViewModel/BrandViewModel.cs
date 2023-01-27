@@ -19,13 +19,13 @@ namespace Banachowicz.CameraCatalogue.UI.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        public int Id
+        public int ID
         {
             get => Brand.ID;
             set
             {
                 Brand.ID = value;
-                RaisePropertyChanged(nameof(Id));
+                RaisePropertyChanged(nameof(ID));
             }
         }
 
