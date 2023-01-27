@@ -1,25 +1,10 @@
 ﻿using Banachowicz.CameraCatalogue.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Banachowicz.CameraCatalogue.DAOSql
 {
     public class SqlDao : IDAO
     {
         private DatabaseContext db = new DatabaseContext();
-
-        public IBrand AddNewBrand(IBrand brand)
-        {
-            throw new NotImplementedException();
-        }
-
-        public ICamera AddNewCamera(ICamera camera)
-        {
-            throw new NotImplementedException();
-        }
 
         public IEnumerable<IBrand> GetAllBrands()
         {
@@ -37,6 +22,26 @@ namespace Banachowicz.CameraCatalogue.DAOSql
         }
 
         public ICamera GetCamera(int ID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IBrand NewBrand()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICamera NewCamera()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IBrand SaveBrand(IBrand brand)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICamera SaveCamera(ICamera camera)
         {
             throw new NotImplementedException();
         }

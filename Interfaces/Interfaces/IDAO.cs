@@ -5,10 +5,10 @@
         IEnumerable<ICamera> GetAllCameras();
         IEnumerable<IBrand> GetAllBrands();
 
-        ICamera AddNewCamera(ICamera camera);
-        IBrand AddNewBrand(IBrand brand);
+        ICamera SaveCamera(ICamera camera);
+        IBrand SaveBrand(IBrand brand);
 
-        ICamera GetCamera(int ID);
-        IBrand GetBrand(int ID);
+        ICamera NewCamera();
+        IBrand NewBrand();
     }
 }

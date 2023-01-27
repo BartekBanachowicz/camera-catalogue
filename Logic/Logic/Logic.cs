@@ -5,29 +5,37 @@ namespace Banachowicz.CameraCatalogue.Logic
 {
     public class Logic
     {
-        private Interfaces.IDAO dao;
+        private IDAO dao;
 
-        public IEnumerable<Interfaces.ICamera> GetCameras()
+        public IEnumerable<ICamera> GetCameras()
         {
             return dao.GetAllCameras();
         }
 
-        public IEnumerable<Interfaces.IBrand> GetBrands() 
+        public IEnumerable<IBrand> GetBrands() 
         {
             return dao.GetAllBrands();
         }
 
-        public IBrand AddEmptyBrand()
+        public IBrand NewBrand()
         {
-            return dao.AddEmptyBrand();
+            return dao.NewBrand();
+        }
+
+        public void SaveBrand(IBrand brand)
+        {
+            dao.SaveBrand(brand);
+        }
+
+        public void DeleteBrand(IBrand brand)
+        {
+        
         }
 
         public Logic(String daoPath) 
         {
             Assembly a = Assembly.UnsafeLoadFrom(daoPath);
-
-            Type interfaceToFind = typeof(Interfaces.IDAO);
-            Type classToCreate = null;
+            Type? classToCreate = null;
 
             foreach (Type type in a.GetTypes())
             {
@@ -39,7 +47,7 @@ namespace Banachowicz.CameraCatalogue.Logic
 
             if (classToCreate != null) 
             {
-                dao = (Interfaces.IDAO)Activator.CreateInstance(classToCreate, new object[] { });
+                dao = (IDAO)Activator.CreateInstance(classToCreate, new object[] { });
             }
         }
     }

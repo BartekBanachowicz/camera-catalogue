@@ -26,7 +26,7 @@ namespace Banachowicz.CameraCatalogue.UI
         public MainWindow()
         {
             InitializeComponent();
-            Logic.Logic logic = new Logic.Logic("DAOSql.dll");
+            Logic.Logic logic = new Logic.Logic("DAOMock.dll");
 
             BrandsTab.DataContext = new BrandListViewModel(logic);
             

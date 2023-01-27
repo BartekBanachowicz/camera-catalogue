@@ -8,7 +8,7 @@ namespace Banachowicz.CameraCatalogue.UI.ViewModel
         private IBrand Brand;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public BrandViewModel(IBrand brand) 
+        public BrandViewModel(IBrand brand)
         {
             this.Brand = brand;
         }
@@ -47,6 +47,11 @@ namespace Banachowicz.CameraCatalogue.UI.ViewModel
                 Brand.Country = value;
                 RaisePropertyChanged(nameof(Country));
             }
+        }
+
+        public IBrand GetBrand()
+        {
+            return Brand;
         }
     }
 }

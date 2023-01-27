@@ -27,18 +27,6 @@ namespace Banachowicz.CameraCatalogue.DAOMock
             };
         }
 
-        public IBrand AddNewBrand(IBrand brand)
-        {
-            this._brands.Add(brand);
-            return brand;
-        }
-
-        public ICamera AddNewCamera(ICamera camera)
-        {
-            this._cameras.Add(camera);
-            return camera;
-        }
-
         public IEnumerable<IBrand> GetAllBrands()
         {
             return this._brands;
@@ -49,14 +37,24 @@ namespace Banachowicz.CameraCatalogue.DAOMock
             return this._cameras;
         }
 
-        public IBrand GetBrand(int ID)
+        public IBrand NewBrand()
         {
-            return this._brands[ID - 1];
+            return new Brand();
         }
 
-        public ICamera GetCamera(int ID)
+        public ICamera NewCamera()
         {
-            return this._cameras[ID - 1];
+            return new Camera();
+        }
+
+        public IBrand SaveBrand(IBrand brand)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICamera SaveCamera(ICamera camera)
+        {
+            throw new NotImplementedException();
         }
     }
 }
